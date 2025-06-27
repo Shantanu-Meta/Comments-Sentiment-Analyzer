@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function AnalyzeForm({ onResult }) {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
-  const be_url = "https://sentiment-analyzer-be.vercel.app/"; 
+  const be_url = "https://sentiment-analyzer-be.vercel.app"; 
   // || "http://localhost:5000";
 
   const handleSubmit = async (e) => {
