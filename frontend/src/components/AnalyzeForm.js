@@ -3,6 +3,8 @@ import React, { useState } from "react";
 function AnalyzeForm({ onResult }) {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
+  const be_url = "https://sentiment-analyzer-be.vercel.app/"; 
+  // || "http://localhost:5000";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -10,7 +12,7 @@ function AnalyzeForm({ onResult }) {
     onResult(null);
 
     try {
-      const res = await fetch("http://localhost:5000/api/scrape", {
+      const res = await fetch(`${be_url}/api/scrape`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
